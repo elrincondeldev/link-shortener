@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.9.9",
+    "@splinetool/react-spline": "^4.0.0",
     "next": "15.1.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "spline": "^0.0.0",
     "zustand": "^5.0.3"
   },
   "devDependencies": {
