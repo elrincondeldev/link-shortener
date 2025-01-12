@@ -12,10 +12,11 @@ model Link {
     user String
     originalUrl String
     shortenedUrl String
+    shortId String
     active Boolean @default(true)
     clicks Int @default(0)
     tags String[]
-    Comment String[]
+    comment String
     expirationDate DateTime? 
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
