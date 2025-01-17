@@ -27,7 +27,7 @@ function CreateLink({ setPopupIsOpen }: CreateLinkProps) {
       expirationDate: expiration,
     };
     try {
-      const response = await fetch("http://localhost:3000/api/links", {
+      const response = await fetch("/api/links", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

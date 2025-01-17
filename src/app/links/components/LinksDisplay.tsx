@@ -26,15 +26,12 @@ function LinksDisplay() {
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
-      const response = await fetch(
-        `http://localhost:3000/api/links?user=${user?.username}`,
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      const response = await fetch(`/api/links?user=${user?.username}`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
 
       if (response.ok) {
         setIsLoading(false);
