@@ -3,11 +3,8 @@ import { redirect } from "next/navigation";
 
 const prisma = new PrismaClient();
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}) {
+/* eslint-disable @typescript-eslint/no-explicit-any */
+export async function generateMetadata({ params }: any) {
   const slug = params?.slug;
 
   if (!slug) {
@@ -36,11 +33,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function RedirectHandler({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default async function RedirectHandler({ params }: any) {
   const slug = params?.slug;
 
   if (!slug) {
@@ -85,3 +78,4 @@ export default async function RedirectHandler({
 
   redirect(link.originalUrl);
 }
+/* eslint-enable @typescript-eslint/no-explicit-any */
