@@ -11,8 +11,12 @@ function LinkComponent({
   clicks,
   createdAt,
 }: LinkComponentProps) {
-  const onHandleCopy = () => {
-    navigator.clipboard.writeText(shortUrl);
+  const onHandleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(shortUrl);
+    } catch (error) {
+      console.error("Failed to copy to clipboard:", error);
+    }
   };
 
   return (
