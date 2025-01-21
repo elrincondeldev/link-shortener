@@ -18,6 +18,7 @@ function LinkComponent({
       await navigator.clipboard.writeText(shortUrl);
       toast.success("Copied to clipboard!");
     } catch (error) {
+      toast.error("Failed to copy to clipboard");
       console.error("Failed to copy to clipboard:", error);
     }
   };
