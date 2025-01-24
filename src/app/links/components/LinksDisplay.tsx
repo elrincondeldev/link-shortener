@@ -49,7 +49,7 @@ function LinksDisplay() {
   return (
     <section className="flex flex-col gap-10 text-black bg-white w-full rounded-xl p-10 shadow-sm">
       <h2 className="text-3xl font-bold">Links</h2>
-      <p>Total links: {links.length}</p>
+      Total links: {links?.length || 0}
       <ToolBarLinks />
       <div className="flex flex-col gap-5">
         {isLoading ? (
