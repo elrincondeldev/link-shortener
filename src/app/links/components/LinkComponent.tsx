@@ -1,3 +1,5 @@
+import toast from "react-hot-toast";
+
 interface LinkComponentProps {
   shortUrl: string;
   originalUrl: string;
@@ -14,6 +16,7 @@ function LinkComponent({
   const onHandleCopy = async () => {
     try {
       await navigator.clipboard.writeText(shortUrl);
+      toast.success("Copied to clipboard!");
     } catch (error) {
       console.error("Failed to copy to clipboard:", error);
     }
